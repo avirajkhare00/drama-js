@@ -1,0 +1,43 @@
+{
+  "name": "drama-js",
+  "version": "0.1.0",
+  "description": "A JavaScript library to detect drama in text using sentiment analysis",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "drama",
+    "sentiment",
+    "analysis",
+    "text",
+    "nlp"
+  ],
+  "author": "Aviraj Khare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avirajkhare00/drama-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/avirajkhare00/drama-js/issues"
+  },
+  "homepage": "https://github.com/avirajkhare00/drama-js#readme",
+  "dependencies": {
+    "sentiment": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.8.2"
+  }
+}
