@@ -26,8 +26,16 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1
 fi
 
-# Update version in package.json
-npm version $VERSION --no-git-tag-version
+# Check if version is already set in package.json
+CURRENT_VERSION=$(node -p "require('./package.json').version")
+
+if [ "$CURRENT_VERSION" = "$VERSION" ]; then
+  echo "Version $VERSION is already set in package.json"
+  echo "Continuing with release process..."
+else
+  # Update version in package.json
+  npm version $VERSION --no-git-tag-version
+fi
 
 # Update changelog if it exists
 if [ -f CHANGELOG.md ]; then
