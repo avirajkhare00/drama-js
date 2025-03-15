@@ -1,6 +1,6 @@
 {
   "name": "drama-js",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "A JavaScript library to detect drama in text using sentiment analysis",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
